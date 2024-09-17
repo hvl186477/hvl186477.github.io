@@ -3,9 +3,13 @@
     <title>HVLtopia</title>
     <meta charset="utf-8" />
         <style>
-            h1{
-                color: forestgreen;
+            a:link{
+                color: #73AD21;
+                text-decoration: none;
                 
+            }
+            a:visited{
+                color: #73AD21;
             }
             .sok input[type=text]{
                 border-radius: 25px;
@@ -15,7 +19,7 @@
                 float: right;
                 position: absolute;
                 right: 230px;
-                width: 60%;
+                width: 40%;
                 background: #f1f1f1;
             }
             .sok button{
@@ -23,8 +27,8 @@
                 border: 2px solid #73AD21;
                 float: right;
                 position: absolute;
-                right: 30px;
-                width: 20%;
+                right: 45px;
+                width: 12%;
                 padding: 10px;
                 color: black;
                 font-size: 17px;
@@ -40,18 +44,78 @@
                 display: flex;
                 
             }
+            .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: green;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+span{
+	float:right;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
         </style>
 </head>
 <main>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
     <nav>
-    <h1>HVLtopia</h1>
+    <h1><a href="index.php">HVLtopia</a></h1>
     <form class="sok" method="get">
         <button type="submit" name="submit"> Søk </button>
             <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
             
     </form>
 </nav>
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
 
 
 </main>
