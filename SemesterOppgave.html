@@ -2,20 +2,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Kontakt Oss</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #header {
+            background-color:green;
+				display:flex;
+            justify-content:space-between;
+        } 
+        #header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        #back-to-home {
+            background-color:green;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        #back-to-home:hover {
+            background-color: white;
+        }
+        #footer {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+   
+ 
 </head>
 <body>
-    <h1>Kontakt oss!</h1>
+    <div id="header">
+        <a href="index.html">Tilbake til forsiden</a>
+        <h1>Kontakt Oss!</h1>
+        <button>Meny</button>
+    </div>
+    
+    
+    <div class="container">
         <h2>Har du spøsmål om prosjektet?</h2>
             <p>Ta kontakt med oss på tlf +47 55 58 58 00</p>
-            <p>Åpningstider: 08.00-15.00</p>
-            <p>Eller på epost: kontakt@hvltopia.no</p>
+                    <p>Åpningstider: 08.00-15.00</p>
+                    <p>Eller på epost: kontakt@hvltopia.no</p>
          <h2>Chat</h2>
-            <p>Vi har også en døgnåpen chat funksjon</p>
-            <p>Denne finner du plassert nederst på nettsiden</p>
+                    <p>Vi har også en døgnåpen chat funksjon</p>
+                    <p>Denne finner du plassert nederst på nettsiden</p>
         <h2>Er du vår nye samarbeidspartner?</h2>
-            <p>Er du intressert i å bidra til at Bergen blir en mer miljøvennlig og bærekraftig by?</p>
-            <p>Ta kontakt med vår prosjektleder Viljar Strømmen Odden på epost viljar@hvltopia.no</p>
-            <p>eller resten av prosjektgruppa på "om oss"!</p>
-        <img src="kontakBilde.jpeg">
+                    <p>Er du intressert i å bidra til at Bergen blir en mer miljøvennlig og bærekraftig by?</p>
+                    <p>Ta kontakt med vår prosjektleder Viljar Strømmen Odden på epost viljar@hvltopia.no</p>
+                    <p>eller resten av prosjektgruppa på <a href="om oss">om oss</a>!</p>
+            <p></p>
+        <h2>Meny</h2>
+            <ul>
+                <li><a href="Forsiden">Om oss</a></li>
+                <li><a href="Forsiden">Samarbeidspartnere</a></li>
+                <li><a href="Forsiden">Personvern</a></li>
+            </ul>
+            </div>
+        <div id="footer">
+            <p>Still meg spørsmål!</p>
+        </div>
+        
+                
 </body>
 </html>
