@@ -1,0 +1,79 @@
+
+
+.infoBokser{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    position: sticky;
+    top: 0;
+    padding-top: 5px;
+    background-color: white;
+}
+
+.omProsjektet{
+    border: 2px solid green;
+    width: 27%;
+    text-align: center;
+    margin: 3%;
+}
+.omProsjektet:hover{
+    background-color: lightgreen;
+}
+.status{
+    border: 2px solid green;
+    width: 27%;
+    text-align: center;
+    margin: 3%;
+}
+.status:hover{
+    background-color: lightgreen;
+}
+
+.barekraft{
+    border: 2px solid green;
+    width: 27%;
+    text-align: center;
+    margin: 3%;
+}
+.barekraft:hover{
+    background-color: lightgreen;
+}
+.transport{
+    border: 2px solid green;
+    width: 27%;
+    text-align: center;
+    margin: 3%;
+}
+.transport:hover{
+    background-color: lightgreen;
+}
+.kildesortering{
+    border: 2px solid green;
+    width: 27%;
+    text-align: center;
+    margin: 3%;
+}
+.kildesortering:hover{
+    background-color: lightgreen;
+}
+.gjøreTing{
+    border: 2px solid green;
+    width: 27%;
+    text-align: center;
+    margin: 3%;
+}
+.gjøreTing:hover{
+    background-color: lightgreen;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer button{
+    width: 20%;
+    height: 50px;
+    margin: 6%;
+    background-color: green;
+    color: white;
+}
