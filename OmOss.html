@@ -5,233 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Prosjektgruppen</title>
     <style>
-      body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.6;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
 
-#header {
-    background-color: #4EA72E;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px; 
-    align-items: center;
-}
+        #header {
+            background-color: #4EA72E;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px; 
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-#header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: white; 
-}
+        #header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: white; 
+        }
 
-#back-to-home {
-    background-color: white; 
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+        #back-to-home {
+            background-color: white; 
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-#back-to-home:hover {
-    background-color: #e0e0e0; 
-}
+        #back-to-home:hover {
+            background-color: #e0e0e0; 
+        }
 
-#footer {
-    background-color: #333; 
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-    position: relative; 
-}
+        #footer {
+            background-color: #333; 
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            position: relative; 
+        }
 
-.container {
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 15px; 
-    max-width: 1200px;
-    margin: 20px auto; 
-    background-color: white; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-    padding: 20px; 
-    border-radius: 10px; 
-}
+        .container {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 15px; 
+            max-width: 1200px;
+            margin: 20px auto; 
+            background-color: white; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+            padding: 20px; 
+            border-radius: 10px; 
+        }
 
-.container img {
-    width: 100%;
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 10px; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-}
+        .container div {
+            text-align: center; 
+        }
 
-.caption {
-    text-align: center;
-    font-size: 1em; 
-    margin-top: 5px; 
-    color: #555; 
-}
+        .container img {
+            width: 150px; /* Fast bredde */
+            height: 150px; /* Fast høyde */
+            object-fit: cover; /* Beskjær bildet slik at det passer */
+            border-radius: 10px; 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 10px; /* Avstand under bildene */
+        }
 
-h1 {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 20px; 
-    color: #333; 
-}
+        .caption {
+            font-size: 1em; 
+            margin-top: 5px; 
+            color: #555; 
+        }
 
-h2 {
-    font-size: 16px; 
-    text-align: left;
-    margin-bottom: 20px; 
-    color: #666; 
-}
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin: 20px 0; 
+            color: #333; 
+        }
 
-a:link, a:visited {
-    color: black;
-    text-decoration: none;
-}
+        h2 {
+            font-size: 18px; 
+            text-align: center;
+            margin-bottom: 20px; 
+            color: #666; 
+            line-height: 1.4;
+        }
 
-.sok input[type=text] {
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 10px;
-    font-size: 17px;
-    float: right;
-    position: absolute;
-    right: 230px;
-    width: 40%;
-    background: #f1f1f1;
-}
+        a:link, a:visited {
+            color: black;
+            text-decoration: none;
+        }
 
-.sok button {
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    float: right;
-    position: absolute;
-    right: 45px;
-    width: 12%;
-    padding: 10px;
-    color: black;
-    font-size: 17px;
-    cursor: pointer;
-}
+        /* Responsiv design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
 
-.sok button:hover {
-    background-color: lightgreen;
-    padding: 10px;
-}
-
-nav {
-    background-color: #f1f1f1;
-    display: flex;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: green;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-span {
-    float: right;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        grid-template-columns: 1fr; 
-    }
-}
-
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr; 
+            }
+        }
     </style>
 </head>
 <body>
     <div id="header">
-        <h1>hvltopia</h1>
+        <h1>HVLtopia</h1>
         <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
     </div>
 
     <h1>Om Prosjektgruppa</h1>
     <h2>
-        Prosjektteamet består av 6 dedikerte personer hvor vi har én prosjektleder og fem prosjektmedlemmer. 
-        Gruppen jobber sammen for å gjennomføre prosjektet med søkelys på tre hovedområder: samarbeid, kreativitet og effektivitet.<br>  
-        Teamet har brukt ulike verktøy for å kommunisere for å sikre at alle medlemmer har en detaljert beskrivelse av hvilken oppgave som skal gjennomføres, 
-        og kan spørre andre i teamet dersom man har behov for hjelp. 
-        Ved å bruke disse kanalene har teamet sikret at samarbeidet fungerer godt og at medlemmene kan finne kreative løsninger sammen.
+        Prosjektteamet består av seks dedikerte personer med én prosjektleder og fem prosjektmedlemmer. 
+        Gruppen jobber sammen for å gjennomføre prosjektet med fokus på tre hovedområder: samarbeid, kreativitet og effektivitet.
+        <br><br>
+        Teamet bruker ulike verktøy for å kommunisere, noe som sikrer at alle medlemmer har en klar forståelse av oppgavene som skal gjennomføres. 
+        Dette gjør det også enkelt å spørre andre i teamet om hjelp når det er behov for det. 
+        Ved å bruke disse kanalene har teamet sikret et godt samarbeid og muligheten til å finne kreative løsninger sammen.
     </h2>
 
     <div class="container">
         <div>
             <img src="ViljarBilde.png" alt="Bilde av Viljar">
-            <div class="caption">Viljar Strømmen Odden</div>
+            <div class="caption">
+                Viljar Strømmen Odden<br>
+                Prosjektleder
+            </div>
         </div>
         <div>
             <img src="LeneBilde.jpg" alt="Bilde av Lene">
-            <div class="caption">Lene Johannessen</div>
+            <div class="caption">
+                Lene Johannessen<br>
+                Prosjektmedlem
+            </div>
         </div>
-        <a href="Elida.html">
-            <img src="ElidaBilde.jpg" alt="Bilde av Elida">
-            <div class="caption">Elida Risberg Elverum</div>
-        </a>
+        <div>
+            <a href="Elida.html">
+                <img src="ElidaBilde.jpg" alt="Bilde av Elida">
+                <div class="caption">
+                    Elida Risberg Elverum<br>
+                    Prosjektmedlem
+                </div>
+            </a>
+        </div>
         <div>
             <img src="EirikBilde.jpg" alt="Bilde av Eirik">
-            <div class="caption">Eirik Innselset Bjørdal</div>
+            <div class="caption">
+                Eirik Innselset Bjørdal<br>
+                Prosjektmedlem
+            </div>
         </div>
         <div>
             <img src="BrageBilde.jpg" alt="Bilde av Brage">
-            <div class="caption">Brage Bakken</div>
+            <div class="caption">
+                Brage Bakken<br>
+                Prosjektmedlem
+            </div>
         </div>
         <div>
             <img src="AndreasBilde.jpg" alt="Bilde av Andreas">
-            <div class="caption">Andreas Dahl Kaartinen</div>
+            <div class="caption">
+                Andreas Dahl Kaartinen<br>
+                Prosjektmedlem
+            </div>
         </div>
+    </div>
+
+    <div id="footer">
+        <p>© 2024 HVLtopia. Alle rettigheter forbeholdt.</p>
     </div>
 
 </body>
