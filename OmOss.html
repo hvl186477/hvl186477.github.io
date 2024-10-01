@@ -17,8 +17,8 @@
             background-color: #4EA72E;
             display: flex;
             justify-content: space-between;
-            padding: 15px 20px; 
             align-items: center;
+            padding: 15px 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -26,11 +26,13 @@
         #header h1 {
             margin: 0;
             font-size: 28px;
-            color: white; 
+            color: white;
+            flex-grow: 1;
+            text-align: center;
         }
 
         #back-to-home {
-            background-color: white; 
+            background-color: white;
             color: black;
             padding: 10px 15px;
             text-decoration: none;
@@ -41,89 +43,156 @@
         }
 
         #back-to-home:hover {
-            background-color: #e0e0e0; 
+            background-color: #e0e0e0;
         }
 
         #footer {
-            background-color: #333; 
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 15px 0;
             margin-top: 20px;
-            position: relative; 
         }
 
         .container {
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 15px; 
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
             max-width: 1200px;
-            margin: 20px auto; 
-            background-color: white; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-            padding: 20px; 
-            border-radius: 10px; 
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
         }
 
         .container div {
-            text-align: center; 
+            text-align: center;
         }
 
         .container img {
             width: 150px; /* Fast bredde */
             height: 150px; /* Fast høyde */
             object-fit: cover; /* Beskjær bildet slik at det passer */
-            border-radius: 10px; 
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 10px; /* Avstand under bildene */
         }
 
         .caption {
-            font-size: 1em; 
-            margin-top: 5px; 
-            color: #555; 
+            font-size: 1em;
+            margin-top: 5px;
+            color: #555;
         }
 
         h1 {
             font-size: 28px;
             text-align: center;
-            margin: 20px 0; 
-            color: #333; 
+            margin: 20px 0;
+            color: #333;
         }
 
         h2 {
-            font-size: 18px; 
+            font-size: 18px;
             text-align: center;
-            margin-bottom: 20px; 
-            color: #666; 
+            margin-bottom: 20px;
+            color: #666;
             line-height: 1.4;
         }
 
-        a:link, a:visited {
-            color: black;
-            text-decoration: none;
+        .sidenav {
+            height: 100%;
+            width: 250px; /* Fikser bredden på menyen */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: -250px; /* Skjuler menyen utenfor skjermen */
+            background-color: #4EA72E;
+            overflow-x: hidden;
+            transition: 0.5s; /* Overgang for animasjon */
+            padding-top: 60px;
         }
 
-        /* Responsiv design */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #3e8e41;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            color: white;
+        }
+
+        span {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: repeat(2, 1fr); 
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            #header h1 {
+                font-size: 24px;
             }
         }
 
         @media (max-width: 480px) {
             .container {
-                grid-template-columns: 1fr; 
+                grid-template-columns: 1fr;
             }
+        }
+
+        .sok input[type=text] {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 10px;
+            font-size: 17px;
+            width: 40%;
+            background: #f1f1f1;
+        }
+
+        .sok button {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            width: 12%;
+            padding: 10px;
+            color: black;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sok button:hover {
+            background-color: lightgreen;
+        }
+
+        .link-om-oss {
+            color: #4EA72E; 
+            font-weight: bold;
+            text-decoration: underline; 
         }
     </style>
 </head>
 <body>
     <div id="header">
-        <h1>HVLtopia</h1>
         <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
+        <h1>HVLtopia</h1>
+        <span onclick="openNav()">&#9776;</span>
     </div>
-
+    
     <h1>Om Prosjektgruppa</h1>
     <h2>
         Prosjektteamet består av seks dedikerte personer med én prosjektleder og fem prosjektmedlemmer. 
@@ -137,53 +206,50 @@
     <div class="container">
         <div>
             <img src="ViljarBilde.png" alt="Bilde av Viljar">
-            <div class="caption">
-                Viljar Strømmen Odden<br>
-                Prosjektleder
-            </div>
+            <div class="caption">Viljar Strømmen Odden<br>Prosjektleder</div>
         </div>
         <div>
             <img src="LeneBilde.jpg" alt="Bilde av Lene">
-            <div class="caption">
-                Lene Johannessen<br>
-                Prosjektmedlem
-            </div>
+            <div class="caption">Lene Johannessen<br>Prosjektmedlem</div>
         </div>
         <div>
             <a href="Elida.html">
                 <img src="ElidaBilde.jpg" alt="Bilde av Elida">
-                <div class="caption">
-                    Elida Risberg Elverum<br>
-                    Prosjektmedlem
-                </div>
+                <div class="caption">Elida Risberg Elverum<br>Prosjektmedlem</div>
             </a>
         </div>
         <div>
             <img src="EirikBilde.jpg" alt="Bilde av Eirik">
-            <div class="caption">
-                Eirik Innselset Bjørdal<br>
-                Prosjektmedlem
-            </div>
+            <div class="caption">Eirik Innselset Bjørdal<br>Prosjektmedlem</div>
         </div>
         <div>
             <img src="BrageBilde.jpg" alt="Bilde av Brage">
-            <div class="caption">
-                Brage Bakken<br>
-                Prosjektmedlem
-            </div>
+            <div class="caption">Brage Bakken<br>Prosjektmedlem</div>
         </div>
         <div>
             <img src="AndreasBilde.jpg" alt="Bilde av Andreas">
-            <div class="caption">
-                Andreas Dahl Kaartinen<br>
-                Prosjektmedlem
-            </div>
+            <div class="caption">Andreas Dahl Kaartinen<br>Prosjektmedlem</div>
         </div>
     </div>
 
-    <div id="footer">
-        <p>© 2024 HVLtopia. Alle rettigheter forbeholdt.</p>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="OmOss.html">Om Oss</a>
+        <a href="Tjenester.html">Tjenester</a>
+        <a href="Kunder.html">Kunder</a>
+        <a href="Kontakt.html">Kontakt</a>
     </div>
 
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.right = "0"; /* Vise menyen */
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.right = "-250px"; /* Skjule menyen */
+        }
+    </script>
+
+    
 </body>
 </html>

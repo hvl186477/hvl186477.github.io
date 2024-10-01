@@ -11,19 +11,41 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        #header {
-    background-color: #4EA72E;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px; 
-    align-items: center; 
-}
 
-#header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: white; 
+        #header {
+            background-color: #4EA72E;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
+        #menu {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #menu a:hover {
+            background-color: #3e8e41; /* Mørkere grønn ved hover */
+        }
+
+        #header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: white;
+            flex-grow: 1;
+            text-align: center; /* Sentrere overskriften */
+        }
+
         #back-to-home {
             background-color: white;
             color: black;
@@ -32,10 +54,13 @@
             border-radius: 5px;
             font-size: 16px;
             transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+
         #back-to-home:hover {
-            background-color: white;
+            background-color: #e0e0e0;
         }
+
         #footer {
             background-color: gray;
             color: white;
@@ -43,151 +68,153 @@
             padding: 15px 0;
             margin-top: 20px;
         }
+
         .container {
             padding: 20px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 20px auto;
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        a:link{
-                color: black;
-                text-decoration: none;
-                
-            }
-         a:visited{
-                color: black;
-            }
-            .sok input[type=text]{
-                border-radius: 25px;
-                border: 2px solid #73AD21;
-                padding: 10px;
-                font-size: 17px;
-                float: right;
-                position: absolute;
-                right: 230px;
-                width: 40%;
-                background: #f1f1f1;
-            }
-            .sok button{
-                border-radius: 25px;
-                border: 2px solid #73AD21;
-                float: right;
-                position: absolute;
-                right: 45px;
-                width: 12%;
-                padding: 10px;
-                color: black;
-                font-size: 17px;
-                
-                cursor: pointer;
-            }
-            .sok button:hover{
-                background-color: lightgreen;
-                padding: 10px;
-            }
-            nav{
-                background-color: #f1f1f1;
-                display: flex;
-                
-            }
-            .sidenav {
-                    height: 100%;
-                    width: 0;
-                     position: fixed;
-                     z-index: 1;
-                    top: 0;
-                    right: 0;
-                    background-color: green;
-                    overflow-x: hidden;
-                    transition: 0.5s;
-                    padding-top: 60px;
-}
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  transition: 0.3s;
-}
+        .container h1, .container h2 {
+            color: #4EA72E;
+        }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+        .container p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-span{
-	float:right;
-}
+        .sok input[type=text] {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 10px;
+            font-size: 17px;
+            width: 40%;
+            background: #f1f1f1;
+        }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+        .sok button {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            width: 12%;
+            padding: 10px;
+            color: black;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
+        .sok button:hover {
+            background-color: lightgreen;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px; /* Fikser bredden på menyen */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: -250px; /* Skjuler menyen utenfor skjermen */
+            background-color: #4EA72E;
+            overflow-x: hidden;
+            transition: 0.5s; /* Overgang for animasjon */
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #3e8e41;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: white;
+        }
+
+        span {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav { padding-top: 15px; }
+            .sidenav a { font-size: 18px; }
+        }
+
+        @media (max-width: 768px) {
+            #header h1 {
+                font-size: 24px;
+            }
+        }
+
+        /* Stiler for lenken "Om Oss" */
+        .link-om-oss {
+            color: #4EA72E; /* Grønn farge for lenken */
+            font-weight: bold; /* Fet skrift for å fremheve lenken */
+            text-decoration: underline; /* Understreking for å gjøre det klart at det er en lenke */
+        }
     </style>
-   
- 
 </head>
 <body>
     <div id="header">
-            <h1>hvltopia</h1>
-            <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
+        <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
+        <h1>HVLtopia</h1>
+        <span onclick="openNav()">&#9776;</span>
     </div>
 
-    
-    
     <div class="container">
-        <h1> Kontakt Oss</h1>
-        <h2>Har du spøsmål om prosjektet?</h2>
-            <p>Ta kontakt med oss på tlf +47 55 58 58 00</p>
-                    <p>Åpningstider: 08.00-15.00</p>
-                    <p>Eller på epost: kontakt@hvltopia.no</p>
-         <h2>Chat</h2>
-                    <p>Vi har også en døgnåpen chat funksjon</p>
-                    <p>Denne finner du plassert nederst på nettsiden</p>
+        <h1>Kontakt Oss</h1>
+        <h2>Har du spørsmål om prosjektet?</h2>
+        <p>Ta kontakt med oss på telefon: <strong>+47 55 58 58 00</strong></p>
+        <p>Åpningstider: <strong>08.00 - 15.00</strong></p>
+        <p>Eller via e-post: <strong>kontakt@hvltopia.no</strong></p>
+
+        <h2>Chat</h2>
+        <p>Vi har også en døgnåpen chat-funksjon.</p>
+        <p>Denne finner du plassert nederst på nettsiden.</p>
+
         <h2>Er du vår nye samarbeidspartner?</h2>
-                    <p>Er du intressert i å bidra til at Bergen blir en mer miljøvennlig og bærekraftig by?</p>
-                    <p>Ta kontakt med vår prosjektleder Viljar Strømmen Odden på epost viljar@hvltopia.no</p>
-                    <p>eller resten av prosjektgruppa på <a href="OmOss.html">om oss</a>!</p>
-            <p></p>
+        <p>Er du interessert i å bidra til at Bergen blir en mer miljøvennlig og bærekraftig by?</p>
+        <p>Ta kontakt med vår prosjektleder, <strong>Viljar Strømmen Odden</strong>, på e-post: <strong>viljar@hvltopia.no</strong></p>
+        <p>eller resten av prosjektgruppen via vår side <a href="OmOss.html" class="link-om-oss">Om Oss</a>!</p>
+    </div>
 
-            </div>
-        
-    
-        
-        <main>
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
-              </div>
-        
-              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-        
-        <script>
-            function openNav() {
-              document.getElementById("mySidenav").style.width = "250px";
-            }
-            
-            function closeNav() {
-              document.getElementById("mySidenav").style.width = "0";
-            }
-            </script>
-        
-        
-        </main>
-                
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="OmOss.html">Om Oss</a>
+        <a href="Tjenester.html">Tjenester</a>
+        <a href="Kunder.html">Kunder</a>
+        <a href="Kontakt.html">Kontakt</a>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.right = "0"; /* Vise menyen */
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.right = "-250px"; /* Skjule menyen */
+        }
+    </script>
+
+    <div id="footer">
+        <p>© 2024 HVLtopia. Alle rettigheter forbeholdt.</p>
+    </div>
 </body>
-
 </html>
