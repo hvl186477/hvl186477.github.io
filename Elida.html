@@ -5,77 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Prosjektgruppen</title>
     <style>
-      body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px; 
-    line-height: 1.6;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
 
-#header {
-    background-color: #4EA72E;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px; 
-    align-items: center; 
-}
+        #header {
+            background-color: #4EA72E;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-#header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: white; 
-}
+        #header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: white;
+        }
 
-#back-to-home {
-    background-color: white; 
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+        #back-to-home {
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-#back-to-home:hover {
-    background-color: #e0e0e0; 
-}
+        #back-to-home:hover {
+            background-color: #e0e0e0;
+        }
 
-#footer {
-    background-color: #333; 
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-    position: relative; 
-}
-.profile-container {
+        .profile-container {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 20px auto;
             background-color: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            display: flex; 
+            display: flex;
             align-items: center;
-            gap: 20px; 
+            gap: 20px;
         }
 
         .profile-text {
-            flex: 1; /* Tar opp resten av plassen ved siden av bildet */
+            flex: 1;
         }
 
         .profile-container img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .profile-text h1 {
-            font-size: 32px;
-            color: #333;
+            font-size: 36px;
+            color: #4EA72E;
             margin-bottom: 10px;
         }
 
@@ -89,6 +85,7 @@
             font-size: 18px;
             line-height: 1.6;
             color: #555;
+            margin-bottom: 20px;
         }
 
         .profile-text ul {
@@ -100,27 +97,43 @@
             font-size: 18px;
             color: #333;
             margin: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .profile-text ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4EA72E;
+        }
+
+        #footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            position: relative;
         }
 
         .footer {
             margin-top: 30px;
             font-size: 14px;
             color: #777;
-            text-align: center;
         }
 
         @media (max-width: 768px) {
             .profile-container {
-                flex-direction: column; /* Bildet vil gå over teksten på mindre skjermer */
-                text-align: center; /* Sentrer tekst på små skjermer */
+                flex-direction: column;
+                text-align: center;
             }
 
             .profile-container img {
-                margin-bottom: 20px; /* Avstand mellom bildet og teksten på små skjermer */
+                margin-bottom: 20px;
             }
         }
-
-</style>
+    </style>
 </head>
 <body>
     
@@ -128,31 +141,29 @@
         <h1>HVLtopia</h1>
         <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
     </div>
-    <div class="profile-container"></div>
+
+    <div class="profile-container">
         <img src="ElidaBilde.jpg" alt="Bilde av Elida Risberg Elverum">
         
-        <h1>Elida Risberg Elverum</h1>
-        <h2>21 år, Student i Informasjonsteknologi</h2>
-        
-        <p></p>
-            Elida er en engasjert og dyktig student som studerer informasjonsteknologi. Hun spiller en sentral rolle i prosjektet hvlTopia, hvor hun bruker sin kompetanse til å bidra med kreative løsninger og teknologisk innsikt.<br>
-            Som prosjektmedlem er Elida kjent for sin struktur og pålitelighet. Hun har en sterk evne til å holde oversikt over detaljene, noe som gjør henne til en ressurs for å holde prosjektet på rett spor.<br>
-            Hennes kommunikasjonsevner gjør at hun samarbeider godt med teamet og sørger for at alle forstår sine oppgaver og ansvarsområder.<br>
-            Hun er også en løsningsorientert person, alltid på utkikk etter innovative måter å håndtere utfordringer på. I tillegg har hun en bred teknisk kompetanse, spesielt innen utvikling og systemdesign, <br>
-            noe som har vist seg uvurderlig for prosjektets fremdrift.<br>
+        <div class="profile-text">
+            <h1>Elida Risberg Elverum</h1>
+            <h2>21 år, Student i Informasjonsteknologi</h2>
+            <p>Elida er en engasjert og dyktig student som studerer informasjonsteknologi. Hun spiller en sentral rolle i prosjektet HVLtopia, hvor hun bruker sin kompetanse til å bidra med kreative løsninger og teknologisk innsikt. Som prosjektmedlem er Elida kjent for sin struktur og pålitelighet. Hun har en sterk evne til å holde oversikt over detaljene, noe som gjør henne til en ressurs for å holde prosjektet på rett spor. Hennes kommunikasjonsevner gjør at hun samarbeider godt med teamet og sørger for at alle forstår sine oppgaver og ansvarsområder. Hun er også en løsningsorientert person, alltid på utkikk etter innovative måter å håndtere utfordringer på. I tillegg har hun en bred teknisk kompetanse, spesielt innen utvikling og systemdesign, noe som har vist seg uvurderlig for prosjektets fremdrift.</p>
 
-        <h3>Elidas sterke sider inkluderer:</h3>
-        <ul>
-            <li>Gode kommunikasjonsferdigheter</li>
-            <li>Teknisk dyktig innen IT og systemutvikling</li>
-            <li>Strukturert og organisert</li>
-            <li>Kreativ problemløser</li>
-            <li>Engasjert teamspiller</li>
-        </ul>
+            <h3>Elidas sterke sider inkluderer:</h3>
+            <ul>
+                <li>Gode kommunikasjonsferdigheter</li>
+                <li>Teknisk dyktig innen IT og systemutvikling</li>
+                <li>Strukturert og organisert</li>
+                <li>Kreativ problemløser</li>
+                <li>Engasjert teamspiller</li>
+            </ul>
+        </div>
+    </div>
 
+    <div id="footer">
+        <p>© 2024 HVLtopia. Alle rettigheter forbeholdt.</p>
     </div>
 
 </body>
 </html>
-    
-</body>
