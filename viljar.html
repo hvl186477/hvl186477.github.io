@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Prosjektgruppen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        #header {
+            background-color: #4EA72E;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: white;
+        }
+
+        #back-to-home {
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #back-to-home:hover {
+            background-color: #e0e0e0;
+        }
+
+        .profile-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        .profile-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-text h1 {
+            font-size: 36px;
+            color: #4EA72E;
+            margin-bottom: 10px;
+        }
+
+        .profile-text h2 {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .profile-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .profile-text ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-text ul li {
+            font-size: 18px;
+            color: #333;
+            margin: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .profile-text ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4EA72E;
+        }
+
+        #footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+        .sok input[type=text] {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 10px;
+            font-size: 17px;
+            width: 40%;
+            background: #f1f1f1;
+        }
+
+        .sok button {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            width: 12%;
+            padding: 10px;
+            color: black;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sok button:hover {
+            background-color: lightgreen;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: -250px; 
+            background-color: #4EA72E;
+            overflow-x: hidden;
+            transition: 0.5s; 
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #3e8e41;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: white;
+        }
+
+        span {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-container img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="header">
+        <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
+        <h1>HVLtopia</h1>
+        <span onclick="openNav()">&#9776;</span>
+    </div>
+
+    <div class="profile-container">
+        <img src="ViljarBilde.png" alt="Bilde av Viljar Strømmen Odden">
+        
+        <div class="profile-text">
+            <h1>Viljar Strømmen Odden</h1>
+            <h2>Prosjekleder</h2>
+            <p>Viljar er en engasjert og dyktig student innen informasjonsteknologi, og han fungerer som prosjektleder for HVLtopia. I denne rollen bruker han sin teknologiske innsikt og kreative evner til å lede teamet mot innovative løsninger. Som prosjektleder er Viljar kjent for sin struktur og pålitelighet, og hans evne til å holde oversikt over alle detaljene sikrer at prosjektet går som planlagt. Han har sterke kommunikasjonsevner, noe som gjør at han lett kan delegere oppgaver og sørge for at alle på teamet forstår sine roller og ansvar. Viljar er også svært løsningsorientert, alltid på jakt etter nye måter å overkomme utfordringer på. Hans brede tekniske kompetanse, spesielt innen utvikling og systemdesign, har vært avgjørende for prosjektets fremdrift og suksess.</p>
+
+            <h3>Viljar sterke sider inkluderer:</h3>
+            <ul>
+                <li>Lederkompetanse – Som prosjektleder viser Viljar sterk evne til å koordinere og lede teamet effektivt, samtidig som han opprettholder et klart fokus på prosjektmålene.</li>
+                <li>Problemløsning – Han er løsningsorientert og har en unik evne til å finne kreative og praktiske løsninger på utfordringer, noe som driver prosjektet fremover.</li>
+                <li>Strukturert – Viljar er svært organisert, noe som gjør ham i stand til å holde oversikt over komplekse prosesser og detaljer, samtidig som han sikrer at alt blir gjennomført i tide.</li>
+                <li>Kommunikasjonsevner – Han er flink til å kommunisere med teamet, noe som skaper klarhet rundt roller og ansvar, og fremmer et godt samarbeid.</li>
+                <li>Teknisk kompetanse – Viljar har en bred og dyp forståelse av teknologi, spesielt innen utvikling og systemdesign, noe som gjør ham til en uvurderlig ressurs i prosjekter som krever teknisk ekspertise.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="OmProsjektet.html">Om Prosjektet</a>
+        <a href="Tjenester.html">Tjenester</a>
+        <a href="Kunder.html">Kunder</a>
+        <a href="OmOss.html">Om Prosjektgruppa</a>
+        <a href="KontaktOss.html">Kontakt</a>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.right = "0"; /* Vise menyen */
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.right = "-250px"; /* Skjule menyen */
+        }
+    </script>
+</body>
+</html>
