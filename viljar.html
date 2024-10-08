@@ -197,6 +197,62 @@
                 margin-bottom: 20px;
             }
         }
+        .footer {
+    background-color: #000; /* Svart bakgrunn */
+    color: #fff; /* Hvit tekst */
+    padding: 20px 0;
+    text-align: right; /* Sentraliser tekst */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Full bredde */
+    font-size: 16px; /* Endre denne verdien for å justere skriftstørrelsen */
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 16px; /* Spesifikk skriftstørrelse for p-elementet */
+    line-height: 5;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content a {
+    color: #c5b7b7; /* Hvit tekst for lenkene */
+    text-decoration: none;
+    font-size: 16px; /* Spesifikk skriftstørrelse for lenkene */
+}
+
+.footer-content span {
+    font-size: 16px; /* Juster skriftstørrelsen for span-elementene */
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Understreker lenker ved hover */
+}
+.farge {
+    color: #3f3f3f;
+    text-align: left;
+    position: relative;
+    margin-right: 400px;
+}
+
+.footer-image {
+    width: 70px;
+    height: auto;
+    margin-right: 30px;
+    margin-left: 50px;
+}
     </style>
 </head>
 <body>
@@ -233,6 +289,15 @@
         <a href="OmOss.html">Om Prosjektgruppa</a>
         <a href="KontaktOss.html">Kontakt</a>
     </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                <img src="logo.png" alt="logo" class="footer-image">
+                <span class="farge">HVLtopia / Alle rettigheter reservert</span>
+                <span>kontakt@hvltopia.no / +47 55 58 58 00 / <a href="https://linkedin.com">LinkdIn / </a> Inndalsveien 28, 5063 Bergen</span>
+            </p>
+        </div>
+    </footer>  
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.right = "0"; /* Vise menyen */
@@ -241,6 +306,6 @@
         function closeNav() {
             document.getElementById("mySidenav").style.right = "-250px"; /* Skjule menyen */
         }
-    </script>
+        </script>
 </body>
 </html>
