@@ -128,7 +128,6 @@ overflow-x: hidden;
 transition: 0.5s;
 padding-top: 60px;
 }
-
 .sidenav a {
 padding: 8px 8px 8px 32px;
 text-decoration: none;
@@ -137,11 +136,9 @@ color: black;
 display: block;
 transition: 0.3s;
 }
-
 .sidenav a:hover {
 color: #f1f1f1;
 }
-
 .sidenav .closebtn {
 position: absolute;
 top: 0;
@@ -164,11 +161,9 @@ float:right;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-
 .container h1, .container h2 {
     color: #232323;
 }
-
 .container p {
     font-size: 18px;
     color: #555;
@@ -185,11 +180,9 @@ float:right;
     align-items: center;
     gap: 20px;
 }
-
 .profile-text {
     flex: 1;
 }
-
 .profile-container img {
     width: 120px;
     height: 120px;
@@ -197,7 +190,6 @@ float:right;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .profile-text h1 {
     font-size: 36px;
     color: #487e34;
@@ -206,25 +198,21 @@ float:right;
    
  
 }
-
 .profile-text h2 {
     font-size: 24px;
     color: #666;
     margin-bottom: 20px;
 }
-
 .profile-text p {
     font-size: 18px;
     line-height: 1.6;
     color: #555;
     margin-bottom: 20px;
 }
-
 .profile-text ul {
     list-style-type: none;
     padding: 0;
 }
-
 .profile-text ul li {
     font-size: 18px;
     color: #333;
@@ -232,14 +220,12 @@ float:right;
     position: relative;
     padding-left: 20px;
 }
-
 .profile-text ul li::before {
     content: '✓';
     position: absolute;
     left: 0;
     color: #4EA72E;
 }
-
 .footer {
     background-color: #000; 
     color: #fff; 
@@ -248,26 +234,22 @@ float:right;
     width: 100%; /* Full bredde */
     min-height: 75px; /* Minimum høyde for footeren */
 }
-
 .footer-content {
     display: flex; /* Bruk flexbox for å justere innhold */
     align-items: center; /* Vertikal justering */
     justify-content: space-between; /* Juster innholdet til hver sin side */
 }
-
 .footer-image {
     width: 70px;
     height: auto;
     margin-right: 30px;
     margin-left: 30px;
 }
-
 .farge {
     color: #3f3f3f;
     text-align: left;
     margin-right: 10px; /* Reduser margin for bedre plassering */
 }
-
 .footer-content p {
     margin: 0;
     font-size: 16px; /* S
@@ -310,11 +292,9 @@ float:right;
     padding: 20px;
     border-radius: 10px;
 }
-
 .container-omoss div {
     text-align: center;
 }
-
 .container-omoss img {
     width: 150px; 
     height: 150px;
@@ -323,13 +303,11 @@ float:right;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px; 
 }
-
 .caption {
     font-size: 1em;
     margin-top: 5px;
     color: #555;
 }
-
 @media (max-width: 768px) {
     .container-omoss {
         grid-template-columns: repeat(2, 1fr);
@@ -344,7 +322,6 @@ float:right;
         grid-template-columns: 1fr;
     }
 }
-
 @media (max-width: 768px) and (prefers-reduced-motion) {
     .profile-container {
         flex-direction: column;
@@ -367,8 +344,6 @@ h1.stil2{
     margin: 20px 0;
     color: #703131;
 }
-
-
 h2.stil1 {
     font-size: 18px;
     text-align: start;
@@ -376,8 +351,7 @@ h2.stil1 {
     margin-bottom: 20px;
     color: #666;
     line-height: 1.4;
-}
-    
+}  
 h2.stil2{
     font-size: 18px;
     text-align: center;
