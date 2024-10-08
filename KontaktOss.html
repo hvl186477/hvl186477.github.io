@@ -7,34 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <header class="mySidenav">
+        <h1><a href="index.php">HVLtopia</a></h1>
+        <form class="sok" method="get">
+            <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
+            <button type="submit" name="submit">Søk</button>
+        </form>
+    </header>
+
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Hjem</a>
-        <a href="#">Samarbeidspartnere</a>
-        <a href="#">Personvern</a>
-        <a href="#">Om oss</a>
-      </div>
+        <a href="OmProsjektet.html">Om Prosjektet</a>
+        <a href="Tjenester.html">Tjenester</a>
+        <a href="Kunder.html">Kunder</a>
+        <a href="OmOss.html">Om Prosjektgruppa</a>
+        <a href="KontaktOss.html">Kontakt</a>
+    </div>
 
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-
-      <nav>
-    <h1><a href="index.php">HVLtopia</a></h1>
-    <form class="sok" method="get">
-        <button type="submit" name="submit"> Søk </button>
-            <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
-            
-    </form>
-</nav>
-<script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
     </script>
-    
 
     <div class="container">
         <h1>Kontakt Oss</h1>
