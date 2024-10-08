@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Prosjektgruppen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        #header {
+            background-color: #4EA72E;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: white;
+        }
+
+        #back-to-home {
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #back-to-home:hover {
+            background-color: #e0e0e0;
+        }
+
+        .profile-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        .profile-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-text h1 {
+            font-size: 36px;
+            color: rgb(147, 195, 147);
+            margin-bottom: 10px;
+        }
+
+        .profile-text h2 {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .profile-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .profile-text ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-text ul li {
+            font-size: 18px;
+            color: #333;
+            margin: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .profile-text ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4EA72E;
+        }
+
+        #footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+        .sok input[type=text] {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 10px;
+            font-size: 17px;
+            width: 40%;
+            background: #f1f1f1;
+        }
+
+        .sok button {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            width: 12%;
+            padding: 10px;
+            color: black;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sok button:hover {
+            background-color: lightgreen;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: -250px; 
+            background-color: #4EA72E;
+            overflow-x: hidden;
+            transition: 0.5s; 
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #3e8e41;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: white;
+        }
+
+        span {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-container img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="header">
+        <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
+        <h1>HVLtopia</h1>
+        <span onclick="openNav()">&#9776;</span>
+    </div>
+
+    <div class="profile-container">
+        <img src="LeneBilde.jpg" alt="Bilde av Lene Johannessen">
+        
+        <div class="profile-text">
+            <h1>Lene Johannessen</h1>
+            <h2>Prosjektmedlem</h2>
+            <p>
+				Lene er utdannet siviløkonom fra før og jobber i en IT-bedrift ved siden av studiene. Hun har med andre ord en bred bakgrunn innen IT og økonomi, 
+				noe som har gitt henne verdifull erfaring med teknologidrevne løsninger innenfor forretningsdrift. 
+				For tiden studerer hun informasjonsteknologi ved Høgskulen på Vestlandet, der hun fokuserer på å styrke sin tekniske kompetanse. 
+				Som teammedlem er Lene kjent for å være strukturert, analytisk og løsningsorientert.
+				Hun bringer også med seg sterke samarbeidsevner og evnen til å se både detaljer og helheten.
+			</p>
+            <h3>Lenes sterke sider inkluderer:</h3>
+            <ul>
+                <li>Strukturert tilnærming</li>
+                <li>Løsningsorientert</li>
+                <li>Analytisk</li>
+                <li>God kommunikasjon</li>
+                <li>Helhetsperspektiv</li>
+            </ul>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="OmProsjektet.html">Om Prosjektet</a>
+        <a href="Tjenester.html">Tjenester</a>
+        <a href="Kunder.html">Kunder</a>
+        <a href="OmOss.html">Om Prosjektgruppa</a>
+        <a href="KontaktOss.html">Kontakt</a>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.right = "0"; /* Vise menyen */
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.right = "-250px"; /* Skjule menyen */
+        }
+    </script>
+</body>
+</html>
