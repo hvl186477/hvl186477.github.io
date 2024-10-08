@@ -3,197 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om prosjektgruppen</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        #header {
-            background-color: #4EA72E;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #header h1 {
-            margin: 0;
-            font-size: 28px;
-            color: white;
-            flex-grow: 1;
-            text-align: center;
-        }
-
-        #back-to-home {
-            background-color: white;
-            color: black;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        #back-to-home:hover {
-            background-color: #e0e0e0;
-        }
-
-        #footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 20px;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            max-width: 1200px;
-            margin: 20px auto;
-            background-color: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .container div {
-            text-align: center;
-        }
-
-        .container img {
-            width: 150px; 
-            height: 150px;
-            object-fit: cover; 
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px; 
-        }
-
-        .caption {
-            font-size: 1em;
-            margin-top: 5px;
-            color: #555;
-        }
-
-        h1 {
-            font-size: 28px;
-            text-align: center;
-            margin: 20px 0;
-            color: #333;
-        }
-
-        h2 {
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #666;
-            line-height: 1.4;
-        }
-
-        .sidenav {
-            height: 100%;
-            width: 250px; 
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            right: -250px; 
-            background-color: #4EA72E;
-            overflow-x: hidden;
-            transition: 0.5s; 
-            padding-top: 60px;
-        }
-
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidenav a:hover {
-            background-color: #3e8e41;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            color: white;
-        }
-
-        span {
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            #header h1 {
-                font-size: 24px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .sok input[type=text] {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            padding: 10px;
-            font-size: 17px;
-            width: 40%;
-            background: #f1f1f1;
-        }
-
-        .sok button {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            width: 12%;
-            padding: 10px;
-            color: black;
-            font-size: 17px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .sok button:hover {
-            background-color: lightgreen;
-        }
-
-        .link-om-oss {
-            color: #4EA72E; 
-            font-weight: bold;
-            text-decoration: underline; 
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"> 
+    <title>Om Prosjektgruppen</title>
 </head>
 <body>
-    <div id="header">
-        <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
-        <h1>HVLtopia</h1>
-        <span onclick="openNav()">&#9776;</span>
-    </div>
+    <header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Hjem</a>
+            <a href="KontaktOss.html">Samarbeidspartnere</a>
+            <a href="#">Personvern</a>
+            <a href="OmOss.html">Om oss</a>
+          </div>
     
-    <h1>Om prosjektgruppa</h1>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    
+          <nav>
+        <h1><a href="index.html">HVLtopia</a></h1>
+        <form class="sok" method="get">
+            <button type="submit" name="submit"> Søk </button>
+                <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
+                
+        </form>
+    </nav>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    </header>
+    <h1>Om Prosjektgruppa</h1>
     <h2>
         Prosjektteamet består av seks dedikerte personer med én prosjektleder og fem prosjektmedlemmer. 
         Gruppen jobber sammen for å gjennomføre prosjektet med fokus på tre hovedområder: samarbeid, kreativitet og effektivitet.
@@ -203,34 +46,32 @@
         Ved å bruke disse kanalene har teamet sikret et godt samarbeid og muligheten til å finne kreative løsninger sammen.
     </h2>
 
-    <div class="container">
+    <div class="container-omoss">
         <div>
-            <a href="viljar.html">
-            <img src="ViljarBilde.png" alt="Bilde av Viljar">
+            <a href="viljar.html"></a>
+            <img src="ViljarBilde.png" alt="Bilde av Viljar" class="OmOss">
             <div class="caption">Viljar Strømmen Odden<br>Prosjektleder</div>
-            </a>
         </div>
         <div>
-			<a href="Lene.html">
-				<img src="LeneBilde.jpg" alt="Bilde av Lene">
-				<div class="caption">Lene Johannessen<br>Prosjektmedlem</div>
-			</a>
-		</div>
+            <a href="Lene.html"></a>
+            <img src="LeneBilde.jpg" alt="Bilde av Lene">
+            <div class="caption">Lene Johannessen<br>Prosjektmedlem</div>
+        </div>
         <div>
-            <a href="Elida.html">
+            <a href="Elida.html"></a>
                 <img src="ElidaBilde.jpg" alt="Bilde av Elida">
                 <div class="caption">Elida Risberg Elverum<br>Prosjektmedlem</div>
             </a>
         </div>
         <div>
+            <a href="Eirik.html"></a>
             <img src="EirikBilde.jpg" alt="Bilde av Eirik">
             <div class="caption">Eirik Innselset Bjørdal<br>Prosjektmedlem</div>
         </div>
         <div>
-			<a href="Brage.html">
-				<img src="BrageBilde.jpg" alt="Bilde av Brage">
-				<div class="caption">Brage Bakken<br>Prosjektmedlem</div>
-			</a>
+            <a href="Brage.html"></a>
+            <img src="BrageBilde.jpg" alt="Bilde av Brage">
+            <div class="caption">Brage Bakken<br>Prosjektmedlem</div>
         </div>
         <div>
             <img src="AndreasBilde.jpg" alt="Bilde av Andreas">
@@ -238,26 +79,14 @@
         </div>
     </div>
 
-    <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="OmProsjektet.html">Om Prosjektet</a>
-            <a href="Tjenester.html">Tjenester</a>
-            <a href="Kunder.html">Kunder</a>
-            <a href="OmOss.html">Om Prosjektgruppa</a>
-            <a href="KontaktOss.html">Kontakt</a>
-        </div>
+    <footer class="footer hovedside">
+        <p>
+            <img src="logo.png" alt="logo" class="footer-image">
+            <span class="farge">HVLtopia / Alle rettigheter reservert</span>
+            <span>kontakt@hvltopia.no / +47 55 58 58 00 / <a href="https://linkedin.com">LinkdIn</a> / Inndalsveien 28, 5063 Bergen</span>
+        </p>
     </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.right = "0"; /* Vise menyen */
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.right = "-250px"; /* Skjule menyen */
-        }
-    </script>
-
+</footer>
     
 </body>
 </html>

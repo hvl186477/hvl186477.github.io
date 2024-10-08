@@ -10,7 +10,6 @@
     padding-top: 5px;
     background-color: white;
 }
-
 .omProsjektet{
     border: 2px solid green;
     width: 27%;
@@ -29,7 +28,6 @@
 .status:hover{
     background-color: lightgreen;
 }
-
 .barekraft{
     border: 2px solid green;
     width: 27%;
@@ -154,12 +152,10 @@ margin-left: 50px;
 span{
 float:right;
 }
-
 @media screen and (max-height: 450px) {
 .sidenav {padding-top: 15px;}
 .sidenav a {font-size: 18px;}
 }
-
 .container{
     padding: 20px;
     max-width: 1200px;
@@ -301,4 +297,63 @@ float:right;
     margin-top: 20px; /* Juster margin */
     font-size: 14px; /* Endret skriftstørrelse */
     color: #777; /* Endret farge for tekst */
+}
+h1 {
+    font-size: 28px;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.4;
+}
+.container-omoss {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container-omoss div {
+    text-align: center;
+}
+
+.container-omoss img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
+}
+
+.caption {
+    font-size: 1em;
+    margin-top: 5px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .container-omoss {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #header h1 {
+        font-size: 24px;
+    }
+}
+@media (max-width: 480px) {
+    .container-omoss {
+        grid-template-columns: 1fr;
+    }
 }
