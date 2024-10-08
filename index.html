@@ -6,12 +6,6 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div id="header">
-			<h1>HVLtopia</h1>
-			<a href="https://www.nrk.no">
-			<button>Meny</button>
-			</a>
-		</div>
 		<header class="header">
 			<div id="mySidenav" class="sidenav" aria-hidden="true">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" onkeypress="if(event.key === 'Enter') closeNav()" tabindex="0">&times;</a>
@@ -19,7 +13,7 @@
 				<a href="KontaktOss.html">Samarbeidspartnere</a>
 				<a href="#">Personvern</a>
 				<a href="OmOss.html">Om oss</a>
-        </div>
+			</div>
         <span 
             style="font-size:30px;cursor:pointer" 
             onclick="openNav()" 
@@ -29,11 +23,11 @@
         </span>
         <nav>
             <h1><a href="index.html">HVLtopia</a></h1>
-            <form class="sok" method="get">
-                <label for="txtSokestreng">Søk:</label>
-                <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
-                <button type="submit" name="submit">Søk</button>
-            </form>
+				<form class="sok" method="get">
+					<label for="txtSokestreng">Søk:</label>
+					<input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
+					<button type="submit" name="submit">Søk</button>
+				</form>
         </nav>
         <script>
             function openNav() {
