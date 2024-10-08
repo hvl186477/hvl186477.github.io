@@ -76,12 +76,16 @@ footer button{
     color: white;
 }
 a:link{
-    color: #73AD21;
+    color: #2d460a;
     text-decoration: none;
-    
 }
+
 a:visited{
-    color: #73AD21;
+    color: #466c12;
+}
+a:visited.footer{
+    color: white;
+
 }
 .sok input[type=text]{
     border-radius: 25px;
@@ -149,7 +153,7 @@ margin-left: 50px;
 span{
 float:right;
 }
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) and (prefers-reduced-motion){
 .sidenav {padding-top: 15px;}
 .sidenav a {font-size: 18px;}
 }
@@ -246,20 +250,22 @@ float:right;
     margin-left: 30px;
 }
 .farge {
-    color: #3f3f3f;
+    color: #aca9a9;
     text-align: left;
     margin-right: 10px; /* Reduser margin for bedre plassering */
 }
 .footer-content p {
     margin: 0;
-    font-size: 16px; /* S
+    font-size: 16px; 
     line-height: 1.5; 
+    color: white;
 }
 
 .footer-links {
     list-style: none;
     padding: 0;
     margin: 10px 0 0;
+    
 }
 
 .footer-links li {
@@ -269,11 +275,12 @@ float:right;
 
 .footer-links a:hover {
     text-decoration: underline; 
+    
 }
 
 
 .hovedside .footer {
-    background-color: #333; /* Endret bakgrunnsfarge for hovedside */
+   
     color: white; /* Endret tekstfarge for hovedside */
     text-align: center; /* Juster tekst til midten */
     padding: 15px 0; /* Juster padding */
@@ -308,7 +315,7 @@ float:right;
     margin-top: 5px;
     color: #555;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (prefers-reduced-motion){
     .container-omoss {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -317,7 +324,7 @@ float:right;
         font-size: 24px;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) and (prefers-reduced-motion){
     .container-omoss {
         grid-template-columns: 1fr;
     }
@@ -360,4 +367,7 @@ h2.stil2{
     color: #666;
     line-height: 1.4;
     }
-
+    .hidden {
+        display: none; 
+    }
+    

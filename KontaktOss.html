@@ -8,34 +8,44 @@
 </head>
 <body>
     <header class="header">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="mySidenav" class="sidenav" aria-hidden="true">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" onkeypress="if(event.key === 'Enter') closeNav()" tabindex="0">&times;</a>
             <a href="index.html">Hjem</a>
             <a href="KontaktOss.html">Samarbeidspartnere</a>
             <a href="#">Personvern</a>
             <a href="OmOss.html">Om oss</a>
-          </div>
+        </div>
     
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <span 
+            style="font-size:30px;cursor:pointer" 
+            onclick="openNav()" 
+            onkeypress="if(event.key === 'Enter') openNav()" 
+            tabindex="0">
+            &#9776;
+        </span>
     
-          <nav>
-        <h1><a href="index.html">HVLtopia</a></h1>
-        <form class="sok" method="get">
-            <button type="submit" name="submit"> Søk </button>
+        <nav>
+            <h1><a href="index.html">HVLtopia</a></h1>
+            <form class="sok" method="get">
+                <label for="txtSokestreng">Søk:</label>
                 <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
-                
-        </form>
-    </nav>
-    <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
+                <button type="submit" name="submit">Søk</button>
+            </form>
+        </nav>
+    
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("mySidenav").setAttribute("aria-hidden", "false"); // Update ARIA attribute
+            }
+    
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("mySidenav").setAttribute("aria-hidden", "true"); // Update ARIA attribute
+            }
         </script>
     </header>
+    
 
     <div class="container">
         <h1>Kontakt oss</h1>
@@ -52,11 +62,14 @@
 
 </body>
 <footer class="footer hovedside">
+    <div class="footer-content">
         <p>
-            <img src="logo.png" alt="logo" class="footer-image">
+            <img src="logo.png" alt="Logo av HVLTopia" class="footer-image">
             <span class="farge">HVLtopia / Alle rettigheter reservert</span>
-            <span>kontakt@hvltopia.no / +47 55 58 58 00 / <a href="https://linkedin.com">LinkdIn</a> / Inndalsveien 28, 5063 Bergen</span>
+            <span>kontakt@hvltopia.no / +47 55 58 58 00 / <a class="footer" href="https://linkedin.com">LinkdIn</a> / Inndalsveien 28, 5063 Bergen</span>
         </p>
     </div>
 </footer>
+
+
 </html>
