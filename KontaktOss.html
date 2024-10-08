@@ -1,182 +1,40 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
     <title>Kontakt Oss</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        #header {
-            background-color: #4EA72E;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #menu {
-            display: flex;
-            flex-direction: column;
-        }
-
-        #menu a {
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        #menu a:hover {
-            background-color: #3e8e41; 
-        }
-
-        #header h1 {
-            margin: 0;
-            font-size: 28px;
-            color: white;
-            flex-grow: 1;
-            text-align: center; 
-        }
-
-        #back-to-home {
-            background-color: white;
-            color: black;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        #back-to-home:hover {
-            background-color: #e0e0e0;
-        }
-
-        #footer {
-            background-color: gray;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 20px;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .container h1, .container h2 {
-            color: #4EA72E;
-        }
-
-        .container p {
-            font-size: 18px;
-            color: #555;
-            margin: 10px 0;
-        }
-
-        .sok input[type=text] {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            padding: 10px;
-            font-size: 17px;
-            width: 40%;
-            background: #f1f1f1;
-        }
-
-        .sok button {
-            border-radius: 25px;
-            border: 2px solid #73AD21;
-            width: 12%;
-            padding: 10px;
-            color: black;
-            font-size: 17px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .sok button:hover {
-            background-color: lightgreen;
-        }
-
-        .sidenav {
-            height: 100%;
-            width: 250px; 
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            right: -250px; 
-            background-color: #4EA72E;
-            overflow-x: hidden;
-            transition: 0.5s; 
-            padding-top: 60px;
-        }
-
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidenav a:hover {
-            background-color: #3e8e41;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-            color: white;
-        }
-
-        span {
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav { padding-top: 15px; }
-            .sidenav a { font-size: 18px; }
-        }
-
-        @media (max-width: 768px) {
-            #header h1 {
-                font-size: 24px;
-            }
-        }
-
-        
-        .link-om-oss {
-            color: #4EA72E; 
-            font-weight: bold;
-            text-decoration: underline; 
-        }
-    </style>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div id="header">
-        <a id="back-to-home" href="index.html">Tilbake til forsiden</a>
-        <h1>HVLtopia</h1>
-        <span onclick="openNav()">&#9776;</span>
-    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Hjem</a>
+        <a href="#">Samarbeidspartnere</a>
+        <a href="#">Personvern</a>
+        <a href="#">Om oss</a>
+      </div>
+
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+      <nav>
+    <h1><a href="index.php">HVLtopia</a></h1>
+    <form class="sok" method="get">
+        <button type="submit" name="submit"> Søk </button>
+            <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
+            
+    </form>
+</nav>
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    
 
     <div class="container">
         <h1>Kontakt Oss</h1>
@@ -216,4 +74,12 @@
 
 
 </body>
+<footer class="footer hovedside">
+        <p>
+            <img src="logo.png" alt="logo" class="footer-image">
+            <span class="farge">HVLtopia / Alle rettigheter reservert</span>
+            <span>kontakt@hvltopia.no / +47 55 58 58 00 / <a href="https://linkedin.com">LinkdIn</a> / Inndalsveien 28, 5063 Bergen</span>
+        </p>
+    </div>
+</footer>
 </html>
