@@ -174,9 +174,6 @@ float:right;
     color: #555;
     margin: 10px 0;
 }
-
-
-
 .profile-container {
     max-width: 900px;
     margin: 20px auto;
@@ -203,8 +200,11 @@ float:right;
 
 .profile-text h1 {
     font-size: 36px;
-    color: #4EA72E;
+    color: #487e34;
     margin-bottom: 10px;
+    text-align: start;
+   
+ 
 }
 
 .profile-text h2 {
@@ -243,10 +243,10 @@ float:right;
 .footer {
     background-color: #000; 
     color: #fff; 
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: left; /* Juster tekst til venstre */
     width: 100%; /* Full bredde */
-    min-height: 100px; /* Minimum høyde for footeren */
+    min-height: 75px; /* Minimum høyde for footeren */
 }
 
 .footer-content {
@@ -259,6 +259,7 @@ float:right;
     width: 70px;
     height: auto;
     margin-right: 30px;
+    margin-left: 30px;
 }
 
 .farge {
@@ -297,20 +298,6 @@ float:right;
     margin-top: 20px; /* Juster margin */
     font-size: 14px; /* Endret skriftstørrelse */
     color: #777; /* Endret farge for tekst */
-}
-h1 {
-    font-size: 28px;
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-}
-
-h2 {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #666;
-    line-height: 1.4;
 }
 .container-omoss {
     display: grid;
@@ -357,3 +344,46 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 768px) and (prefers-reduced-motion) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-container img {
+        margin-bottom: 20px;
+    }
+}
+h1 {
+    font-size: 28px;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+h1.stil2{
+    font-size: 28px;
+    text-align: center;
+    margin: 20px 0;
+    color: #703131;
+}
+
+
+h2.stil1 {
+    font-size: 18px;
+    text-align: start;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.4;
+}
+    
+h2.stil2{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.4;
+    }
+
