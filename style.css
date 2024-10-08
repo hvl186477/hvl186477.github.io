@@ -151,8 +151,11 @@ right: 25px;
 font-size: 36px;
 margin-left: 50px;
 }
-span{
-float:right;
+#hamburger {
+float: right;
+}
+.hidden {
+display: none;
 }
 @media screen and (max-height: 450px) and (prefers-reduced-motion){
 .sidenav {padding-top: 15px;}
@@ -238,11 +241,21 @@ float:right;
     text-align: left; /* Juster tekst til venstre */
     width: 100%; /* Full bredde */
     min-height: 75px; /* Minimum høyde for footeren */
+	display: flex;
 }
 .footer-content {
     display: flex; /* Bruk flexbox for å justere innhold */
     align-items: center; /* Vertikal justering */
     justify-content: space-between; /* Juster innholdet til hver sin side */
+	width: 100%;
+	padding: 0 15px;
+}
+.footer-content div {
+	height: 100%;
+}
+.icon-link {
+  display: inline-block;
+  margin-right: 5px; /* Mellomrom mellom ikoner */
 }
 .footer-image {
     width: 70px;
