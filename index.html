@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>HVLtopia</title>
-		<link rel="stylesheet" href="HVLtopiaCSS.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div id="header">
@@ -12,16 +12,49 @@
 			<button>Meny</button>
 			</a>
 		</div>
+		<header class="header">
+			<div id="mySidenav" class="sidenav" aria-hidden="true">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" onkeypress="if(event.key === 'Enter') closeNav()" tabindex="0">&times;</a>
+				<a href="index.html">Hjem</a>
+				<a href="KontaktOss.html">Samarbeidspartnere</a>
+				<a href="#">Personvern</a>
+				<a href="OmOss.html">Om oss</a>
+        </div>
+        <span 
+            style="font-size:30px;cursor:pointer" 
+            onclick="openNav()" 
+            onkeypress="if(event.key === 'Enter') openNav()" 
+            tabindex="0">
+            &#9776;
+        </span>
+        <nav>
+            <h1><a href="index.html">HVLtopia</a></h1>
+            <form class="sok" method="get">
+                <label for="txtSokestreng">Søk:</label>
+                <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
+                <button type="submit" name="submit">Søk</button>
+            </form>
+        </nav>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("mySidenav").setAttribute("aria-hidden", "false"); // Update ARIA attribute
+            }
+    
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("mySidenav").setAttribute("aria-hidden", "true"); // Update ARIA attribute
+            }
+        </script>
+		</header>
+    
+    
 		<br>
-		<a href="https://www.bergen.kommune.no/">
-			<div style="position: relative; display: inline-block;">
-				<img src="https://www.visitbergen.com/imageresizer/?image=%2Fdbimgs%2Ffun-and-games-bergen-zipline-ulriken.jpg&action=Background_Overlay" alt="Bilde av bergen">
-					<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; 
-						justify-content: left; color: white; font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">
-							Fremtidsrettet og bærekraftig byutvikling
-					</div>
-			</div>
-		</a>
+
+		<img src="https://www.visitbergen.com/imageresizer/?image=%2Fdbimgs%2Ffun-and-games-bergen-zipline-ulriken.jpg&action=Background_Overlay" alt="Bilde av Bergen">
+
+		</div>	
+
 		<p>
 			Her vil du finne informasjon om HVLtopia-prosjektet og et hav av bærekraftige 
 			løsninger. 
@@ -29,46 +62,39 @@
 			som vi reduserer karbonavtrykket byen vår legger fra seg. 
 		<br>
 		</p>
+		
 		<div class="container">
-        <div class="boks">
             <a href="OmProsjektet.html" target="_blank">Om prosjektet</a>
 				<p>Informasjon om prosjektet, hva det dreier seg og mål og visjoner.</p>
-        </div>
-        <div class="boks">
             <a href="status.html">Status</a>
 				<p>Live status om prosjektet, og hva vi har oppnåd så langt.</p>
-        </div>
-        <div class="boks">
-            <a href="https://nrk.no">Bærekraft og samfunnsansvar</a>
+            <a href="#">Bærekraft og samfunnsansvar</a>
 				<p>Informasjon om bærekraft og hvordan vi og kommunen forholder oss til vårt samfunnsansvar.</p>
-        </div>
-		</div>
-		<div class="container">
-			<div class="boks">
-				<a href="https://www.skyss.no/">Transport</a>
-					<p>Finn tips til bærekraftige måter å komme seg frem på!</p>
-			</div>
-			<div class="boks">
-				<a href="https://bir.no/">Kildesortering</a>
-					<p>Finn dine nærmeste sorteringspunkt for glass, papir, plast og matavfall++.</p>
-			</div>
-			<div class="boks">
-				<a href="https://www.visitbergen.com/">Hva kan jeg gjøre i Bergen?</a>
-					<p>HVLtopias beste triks til bærekraftige aktiviteter i Bergen!</p>
-			</div>
+			<a href="#">Transport</a>
+				<p>Finn tips til bærekraftige måter å komme seg frem på!</p>
+			<a href="#">Kildesortering</a>
+				<p>Finn dine nærmeste sorteringspunkt for glass, papir, plast og matavfall++.</p>
+			<a href="#">Hva kan jeg gjøre i Bergen?</a>
+				<p>HVLtopias beste triks til bærekraftige aktiviteter i Bergen!</p>
 		</div>
 		<br>
 		<br>
-		<div class="bottom-container">
-			<div class="boks-liten">
-				<a href="KontaktOss.html" target="_blank">Kontaktinformasjon</a>
-			</div>
-			<div class="boks-liten">
-				<a href="OmOss.html" target="_blank">Om prosjektgruppa</a>
-			</div>
-			<div class="boks-liten">
-				<a href="https://www.bergen.kommune.no/" target="_blank">Bergen kommune</a>
+
+		<a href="KontaktOss.html" target="_blank">Kontaktinformasjon</a>
+		<br>
+		<a href="OmOss.html" target="_blank">Om prosjektgruppa</a>
+		<br>
+		<a href="https://www.bergen.kommune.no/" target="_blank">Bergen kommune</a>
+		<br>
+		<footer class="footer hovedside">
+			<div class="footer-content">
+				<p>
+					<img src="logo.png" alt="Logo av HVLTopia" class="footer-image">
+					<span class="farge">HVLtopia / Alle rettigheter reservert</span>
+					<span>kontakt@hvltopia.no / +47 55 58 58 00 / <a class="footer" href="https://linkedin.com">LinkdIn</a> / Inndalsveien 28, 5063 Bergen</span>
+				</p>
 			</div>
 		</div>
+		</footer>
 	</body>
 </html>
