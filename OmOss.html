@@ -15,35 +15,34 @@
             <a href="#">Personvern</a>
             <a href="OmOss.html">Om oss</a>
         </div>
-    
-        <span 
-            style="font-size:30px;cursor:pointer" 
-            onclick="openNav()" 
-            onkeypress="if(event.key === 'Enter') openNav()" 
-            tabindex="0">
-            &#9776;
-        </span>
-    
-        <nav>
-            <h1><a href="index.html">HVLtopia</a></h1>
+    <span 
+        style="font-size:30px;cursor:pointer" 
+        onclick="openNav()" 
+        onkeypress="if(event.key === 'Enter') openNav()" 
+        tabindex="0"
+        id="hamburger">
+        &#9776;
+    </span>
+    <nav>
+        <a href="index.html"><img src="logo.png" alt="Logo av HVLTopia" class="footer-image"></a>
+        
             <form class="sok" method="get">
-                <label for="txtSokestreng">Søk:</label>
+                <label for="txtSokestreng" class="hidden">Søk</label>
                 <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
                 <button type="submit" name="submit">Søk</button>
             </form>
-        </nav>
-    
-        <script>
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-                document.getElementById("mySidenav").setAttribute("aria-hidden", "false"); // Update ARIA attribute
-            }
-    
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("mySidenav").setAttribute("aria-hidden", "true"); // Update ARIA attribute
-            }
-        </script>
+    </nav>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("mySidenav").setAttribute("aria-hidden", "false"); // Update ARIA attribute
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("mySidenav").setAttribute("aria-hidden", "true"); // Update ARIA attribute
+        }
+    </script>
     </header>
     
     <h1>Om prosjektgruppa</h1>
@@ -88,10 +87,11 @@
             </a>
         </div>
         <div>
-            
-            <img src="AndreasBilde.jpg" alt="Bilde av Andreas">
-            <div class="caption">Andreas Dahl Kaartinen<br>Prosjektmedlem</div>
-        </div>
+            <a href="andreas.html">
+                <img src="AndreasBilde.jpg" alt="Bilde av Andreas">
+                <div class="caption">Andreas Dahl Kaartinen<br>Prosjektmedlem</div>
+            </a>
+        </div>  
     </div>
 
     <footer class="footer hovedside">
