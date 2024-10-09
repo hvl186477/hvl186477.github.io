@@ -10,6 +10,9 @@
 <body>
     
     <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Logo av HVLTopia" class="footer-image"></a>
+        </div>
         <div id="mySidenav" class="sidenav" aria-hidden="true">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" onkeypress="if(event.key === 'Enter') closeNav()" tabindex="0">&times;</a>
             <a href="index.html">Hjem</a>
@@ -17,25 +20,22 @@
             <a href="#">Personvern</a>
             <a href="OmOss.html">Om oss</a>
         </div>
-    
-        <span 
-            style="font-size:30px;cursor:pointer" 
-            onclick="openNav()" 
-            onkeypress="if(event.key === 'Enter') openNav()" 
-            tabindex="0">
-            &#9776;
-        </span>
-    
+
         <nav>
-            <a href="index.html"><img src="logo.png" alt="Logo av HVLTopia" class="footer-image"></a>
-            
-            <form class="sok" method="get">
-                <span id="sokLabel" class="hidden">Søk</span>
-                <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng" aria-labelledby="sokLabel">
-                <button type="submit" name="submit">Søk</button>
-            </form>
-        </nav>
-    
+        <form class="sok" method="get">
+            <span id="sokLabel" class="hidden">Søk</span>
+            <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng" aria-labelledby="sokLabel">
+            <button type="submit" name="submit">Søk</button>
+        </form>
+    </nav>
+    <span
+        style="font-size:30px;cursor:pointer" 
+        onclick="openNav()" 
+        onkeypress="if(event.key === 'Enter') openNav()" 
+        tabindex="0"
+        id="hamburger">
+        &#9776;
+    </span>
         <script>
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";

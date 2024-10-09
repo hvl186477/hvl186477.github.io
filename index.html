@@ -8,6 +8,9 @@
 </head>
 	<body>
 		<header class="header">
+			<div class="logo">
+				<a href="index.html"><img src="logo.png" alt="Logo av HVLTopia" class="footer-image"></a>
+			</div>
 			<div id="mySidenav" class="sidenav" aria-hidden="true">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" onkeypress="if(event.key === 'Enter') closeNav()" tabindex="0">&times;</a>
 				<a href="index.html">Hjem</a>
@@ -15,23 +18,23 @@
 				<a href="#">Personvern</a>
 				<a href="OmOss.html">Om oss</a>
 			</div>
-        <span 
-            style="font-size:30px;cursor:pointer" 
-            onclick="openNav()" 
-            onkeypress="if(event.key === 'Enter') openNav()" 
-            tabindex="0"
-			id="hamburger">
-            &#9776;
-        </span>
-        <nav>
-            <a href="index.html"><img src="logo.png" alt="Logo av HVLTopia" class="footer-image"></a>
-			
+    
+			<nav>
 			<form class="sok" method="get">
 				<span id="sokLabel" class="hidden">Søk</span>
 				<input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng" aria-labelledby="sokLabel">
 				<button type="submit" name="submit">Søk</button>
 			</form>
         </nav>
+		<span
+			style="font-size:30px;cursor:pointer" 
+			onclick="openNav()" 
+			onkeypress="if(event.key === 'Enter') openNav()" 
+			tabindex="0"
+			id="hamburger">
+			&#9776;
+		</span>
+   
         <script>
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
@@ -65,11 +68,11 @@
 				<p>Live status om prosjektet, og hva vi har oppnåd så langt.</p>
             <a href="bhr4.html">Bærekraft og samfunnsansvar</a>
 				<p>Informasjon om bærekraft og hvordan vi og kommunen forholder oss til vårt samfunnsansvar.</p>
-			<a href="skyss.no">Transport</a>
+			<a href="https://www.skyss.no">Transport</a>
 				<p>Finn tips til bærekraftige måter å komme seg frem på!</p>
-			<a href="bir.no">Kildesortering</a>
+			<a href="https://www.bir.no">Kildesortering</a>
 				<p>Finn dine nærmeste sorteringspunkt for glass, papir, plast og matavfall++.</p>
-			<a href="visitbergen.no">Hva kan jeg gjøre i Bergen?</a>
+			<a href="https://www.visitbergen.com">Hva kan jeg gjøre i Bergen?</a>
 				<p>HVLtopias beste triks til bærekraftige aktiviteter i Bergen!</p>
 		</div>
 		<br>
