@@ -84,9 +84,8 @@ a:link{
 a:visited{
     color: #466c12;
 }
-a:visited.footer{
+.footer a:visited {
     color: white;
-
 }
 .sok input[type=text]{
     border-radius: 25px;
