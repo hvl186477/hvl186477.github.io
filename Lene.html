@@ -27,11 +27,11 @@
     <nav>
         <a href="index.html"><img src="logo.png" alt="Logo av HVLTopia" class="footer-image"></a>
         
-            <form class="sok" method="get">
-                <label for="txtSokestreng" class="hidden">Søk</label>
-                <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
-                <button type="submit" name="submit">Søk</button>
-            </form>
+        <form class="sok" method="get">
+            <span id="sokLabel" class="hidden">Søk</span>
+            <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng" aria-labelledby="sokLabel"/>
+            <button type="submit" name="submit">Søk</button>
+        </form>
     </nav>
     <script>
         function openNav() {

@@ -28,8 +28,8 @@
         <nav>
             <h1><a href="index.html">HVLtopia</a></h1>
             <form class="sok" method="get">
-                <label for="txtSokestreng">Søk:</label>
-                <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
+                <span id="sokLabel" class="hidden">Søk</span>
+                <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng" aria-labelledby="sokLabel"/>
                 <button type="submit" name="submit">Søk</button>
             </form>
         </nav>

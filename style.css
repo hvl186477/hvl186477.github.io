@@ -154,8 +154,14 @@ margin-left: 50px;
 float: right;
 }
 .hidden {
-display: none;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
+
 @media screen and (max-height: 450px) and (prefers-reduced-motion){
 .sidenav {padding-top: 15px;}
 .sidenav a {font-size: 18px;}
@@ -425,4 +431,10 @@ h2.stil2{
 }
 .lenker a {
 	font-size: 20px
+}
+.p-footer {
+    font-size: 30px;
+	line-height: 1.4;
+    color: rgb(9, 255, 108);
+	
 }
