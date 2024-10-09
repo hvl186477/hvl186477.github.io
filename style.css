@@ -168,6 +168,20 @@ nav {
     color: #232323;
 }
 
+.main-content {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 24px;
+	padding: 2%;
+}
+
+.card {
+	background-color: white;
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+	padding: 4%;
+}
+
 .container p {
     font-size: 1.125em; 
     color: #555;
@@ -192,6 +206,20 @@ nav {
 
 .profile-container img {
     width: 12em; 
+    height: 12em; 
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+}
+
+.center-image {
+	display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.samarbeidspartnere-image {
+	width: 12em; 
     height: 12em; 
     border-radius: 50%;
     object-fit: cover;
@@ -241,7 +269,6 @@ nav {
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 2%; 
     text-align: left; 
     width: 100%; 
     min-height: 5%; 
@@ -253,7 +280,7 @@ nav {
     align-items: center; 
     justify-content: space-between; 
     width: 100%;
-    padding: 0 1%; 
+    padding: 2% 2%; 
 }
 
 .footer-content div {
@@ -275,7 +302,7 @@ nav {
 .farge {
     color: #aca9a9;
     text-align: left;
-    margin-right: 1%; 
+
 }
 
 .footer-content p {
@@ -306,16 +333,6 @@ nav {
 .footer-links a:hover {
     text-decoration: underline;
 }
-
-.hovedside .footer {
-    color: white; 
-    text-align: center; 
-    padding: 2%; 
-    margin-top: 2%; 
-    font-size: 0.875em; 
-    color: #777; 
-}
-
 .container-omoss {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
