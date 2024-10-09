@@ -277,7 +277,13 @@ float: right;
     margin: 0;
     font-size: 16px; 
     line-height: 1.5; 
-    color: white;
+    color: rgb(205, 203, 203);
+}
+.footer-content a {
+    margin: 0;
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #ffcece;
 }
 
 .footer-links {
@@ -286,14 +292,15 @@ float: right;
     margin: 10px 0 0;
     
 }
-
 .footer-links li {
     display: inline;
     margin: 0 10px;
+
 }
 
 .footer-links a:hover {
     text-decoration: underline; 
+
     
 }
 
@@ -431,10 +438,4 @@ h2.stil2{
 }
 .lenker a {
 	font-size: 20px
-}
-.p-footer {
-    font-size: 30px;
-	line-height: 1.4;
-    color: rgb(9, 255, 108);
-	
 }
