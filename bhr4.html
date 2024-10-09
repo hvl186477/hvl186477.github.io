@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bærekraft og Samfunnsansvar</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"> 
+    <style>
+        
+        a:link {
+            color: #73AD21;
+            text-decoration: none; 
+        }
+
+        a:visited {
+            color: #73AD21; 
+        }
+
+        .sok input[type=text] {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 10px;
+            font-size: 17px;
+            float: right;
+            position: absolute;
+            right: 230px; 
+            width: 40%;
+            background: #f1f1f1;
+        }
+
+        body {
+          background-image: url("bilder/bakgrunn.jpg"); 
+        }
+        /* ... (resten av CSS-koden) ... */
+    </style>
+</head>
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Hjem</a>  
+        <a href="#">Samarbeidspartnere</a>
+        <a href="#">Personvern</a>
+        <a href="#">Om oss</a>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+    <nav>
+        <h1><a href="index.html">Hvl Topia</a></h1> 
+        <form class="sok" method="get">
+            <button type="submit" name="submit"> Søk </button>
+
+        </form>
+    </nav>
+
+    <h1>Bærekraft og Samfunnsansvar</h1>
+    <hr>
+
+    <p>Denne siden er dedikert til å vise hvordan bærekraft integreres i prosjektet. Vi fokuserer på følgende områder:</p>
+
+    <h2>Energi og Miljø</h2>
+    <p>Vi er forpliktet til å redusere vårt energiforbruk og karbonfotavtrykk.  For å oppnå dette, implementerer vi følgende tiltak:</p>
+    <ul>
+        <li>Bruk av energieffektive materialer og teknologier</li>
+        <li>Optimalisering av bygningens design for å minimere energibruk</li>
+        <li>Implementering av fornybare energikilder som solcellepaneler</li>
+        <li>Redusere avfall og fremme gjenvinning</li>
+    </ul>
+
+    <h2>Mobilitet</h2>
+    <p>Vi fremmer bærekraftig mobilitet ved å tilby følgende transportløsninger:</p>
+    <ul>
+        <li>Tilrettelegging for sykling og gange</li>
+        <li>Informasjon om kollektivtransport</li>
+        <li>Ladepunkter for elbiler</li>
+        <li>Samkjøring og bildeling</li>
+    </ul>
+
+    <h2>Helse og Sikkerhet</h2>
+    <p>Helse og sikkerhet er en topp prioritet i prosjektet. Vi integrerer følgende tiltak i design og teknologi:</p>
+    <ul>
+        <li>Ergonomisk design av arbeidsplasser</li>
+        <li>Bruk av sikre materialer og teknologier</li>
+        <li>Implementering av smarte systemer for å overvåke og forbedre sikkerheten</li>
+        <li>Opplæring og bevisstgjøring av ansatte om helse og sikkerhet</li>
+    </ul>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>
