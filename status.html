@@ -1,20 +1,86 @@
 <html lang="no">
 <head>
-    <title>Status HVLtopia</title>
+     <title>Status HVLtopia</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .prosjekter{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 3%;
+        }
+        .smarteSensorer{
+            width: 30%;
+            background-color: lightgreen;
+            text-align: center;
+            border-radius: 25px;
+            margin: 3%;
+        }
+        .kollektiv{
+            width: 30%;
+            background-color: lightsalmon;
+            text-align: center;
+            border-radius: 25px;
+            margin: 3%;
+        }
+
 </head>
 <body>
-    <h1><a href="index.html">HVLtopia</a></h1>
+    <header class="header">
+        <div id="mySidenav" class="sidenav" aria-hidden="true">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" onkeypress="if(event.key === 'Enter') closeNav()" tabindex="0">&times;</a>
+            <a href="index.html">Hjem</a>
+            <a href="KontaktOss.html">Samarbeidspartnere</a>
+            <a href="#">Personvern</a>
+            <a href="OmOss.html">Om oss</a>
+        </div>
+    <span 
+        style="font-size:30px;cursor:pointer" 
+        onclick="openNav()" 
+        onkeypress="if(event.key === 'Enter') openNav()" 
+        tabindex="0"
+        id="hamburger">
+        &#9776;
+    </span>
+    <nav>
+        <a href="index.html"><img src="logo.png" alt="Logo av HVLTopia" class="footer-image"></a>
+        
+            <form class="sok" method="get">
+                <label for="txtSokestreng" class="hidden">Søk</label>
+                <input type="text" placeholder="Hva leter du etter?" name="txtSokestreng" id="txtSokestreng"/>
+                <button type="submit" name="submit">Søk</button>
+            </form>
+    </nav>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("mySidenav").setAttribute("aria-hidden", "false"); // Update ARIA attribute
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("mySidenav").setAttribute("aria-hidden", "true"); // Update ARIA attribute
+        }
+    </script>
+    </header>
     <h2>Status</h2>
-        <dl>
-            <dt><h3>Påbegynt</h3></dt>
-            <dd>- Instalasjon av smarte sensorer</dd>
-            
-            <dt><h3>Planlegges</h3></dt>
-            <dd>- Utbedre transportsystemer</dd>
-          </dl>
+<div class="prosjekter">
+    <div class="smarteSensorer">
+        <img src="smarteSensorer.jpg" alt="Bilde av luftmåler" width="100%">
+        <h2>Smarte sensorer</h2>
+        <p>Ferdig</p>
+        <p>Ferdig innstallert</p>
 
+    </div>
+    <div class="kollektiv">
+    <img src="buss.jpg" alt="Bilde av buss" width="100%">
+        <h2>Utbedring av Transporttilbud</h2>
+        <p>Påbegynt</p>
+        <p>Vi har påbegynt prossesen å utbedre og skape trygge og effektive Transporttilbud</p>
 
+    </div>
+</div>
 </body>
 footer class="footer">
     <div class="footer-content">
