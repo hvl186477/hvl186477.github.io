@@ -405,10 +405,11 @@ h2.stil2{
 		padding-left:40px;
 } 
 .tekstOgBilde {
-		display: flex;
 		display: grid;
 		align-items: center; 
+		justify-items: center;
 		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
 		column-gap: 5px;
 }
 .bildetiltekst {
