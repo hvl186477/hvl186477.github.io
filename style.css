@@ -54,6 +54,13 @@ a:link {
 .h1 .forside{
     font-size: 1.125em;
 }
+.luftmaaling{
+    font-size: 1em;
+    text-align: center;
+}
+
+
+
 
 a:visited {
     color: #466c12;
