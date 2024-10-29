@@ -20,8 +20,6 @@ axInterval = fig.add_axes((0.50, 0.5, 0.1, 0.25))
 axBergen = fig.add_axes((0.5, 0.05, 0.5, 0.9))
 
 axTextBoxStart = fig.add_axes((0.05, 0.038, 0.45, 0.05))
-axTextBoxSlutt = fig.add_axes((0.50, 0.3, 0.1, 0.05))
-
 axInterval.patch.set_alpha(0.5)
 
 coordinates_Nordnes = (61, 266)
@@ -39,16 +37,16 @@ def on_day_interval(kvartal):
     global days_interval, marked_point
     axNok.cla()
     days_interval = (1,365)
-    if kvartal == '1. Kvartal':
+    if kvartal == 'Halvår':
         days_interval = (1,90)
         update_range()
-    if kvartal == '2. Kvartal':
+    if kvartal == 'Kvartal':
         days_interval = (90, 180)
         update_range()
-    if kvartal == '3. Kvartal':
+    if kvartal == 'Måned':
         days_interval = (180,270)
         update_range()
-    if kvartal == '4. Kvartal':
+    if kvartal == 'Uke':
         days_interval = (270,365)
         update_range()
     marked_point = (0, 0)
@@ -151,19 +149,6 @@ def plot_graph():
 
 
 plot_graph()
-"""
-text_box_start = TextBox(axTextBoxStart, "Startdag:", textalignment="center", initial="1")
-labelStart = text_box_start.ax.get_children()[0]
-labelStart.set_position((0.5, 1.5))
-labelStart.set_verticalalignment('top')
-labelStart.set_horizontalalignment('center')
-
-text_box_slutt = TextBox(axTextBoxSlutt, "Sluttdag:", textalignment="center", initial="365")
-labelSlutt = text_box_slutt.ax.get_children()[0]
-labelSlutt.set_position((0.5, 1.5))
-labelSlutt.set_verticalalignment('top')
-labelSlutt.set_horizontalalignment('center')
-"""
 
 slider_intervall = Slider(ax = axTextBoxStart,
                           valmin=days_interval[0],
@@ -193,10 +178,10 @@ slider_intervall.on_changed(update)
 listFonts = [12] * 5
 listColors = ['yellow'] * 5
 radio_button = RadioButtons(axInterval, ('År',
-                                          '1. Kvartal',
-                                          '2. Kvartal',
-                                          '3. Kvartal',
-                                          '4. Kvartal'),
+                                          'Halvår',
+                                          'Kvartal',
+                                          'Måned',
+                                          'Uke'),
                             label_props={'color': listColors, 'fontsize' : listFonts},
                             radio_props={'facecolor': listColors,  'edgecolor': listColors},
                             )
