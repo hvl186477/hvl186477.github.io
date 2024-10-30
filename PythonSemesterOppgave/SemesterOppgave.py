@@ -2,7 +2,7 @@ import math
 import statistics
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.widgets import RadioButtons, TextBox, Slider
+from matplotlib.widgets import RadioButtons, Slider
 import matplotlib.image as mpimg
 import matplotlib.patches as mpatches
 from Hjelpemetoder import GenereateRandomYearDataList
@@ -19,7 +19,8 @@ axNok = fig.add_axes((0.05, 0.05, 0.45, 0.9))
 axInterval = fig.add_axes((0.50, 0.5, 0.1, 0.25))
 axBergen = fig.add_axes((0.5, 0.05, 0.5, 0.9))
 
-axTextBoxStart = fig.add_axes((0.05, 0.038, 0.45, 0.05))
+axSliderStart = fig.add_axes((0.05, 0.00, 0.45, 0.05))
+axSliderSlutt = fig.add_axes((0.05, 0.031, 0.45, 0.05))
 axInterval.patch.set_alpha(0.5)
 
 coordinates_Nordnes = (61, 266)
@@ -30,24 +31,43 @@ nord_nox = nord_nox_year[days_interval[0]:days_interval[1]]
 days = len(nord_nox)
 
 def update_range():
-    slider_intervall.valmin = days_interval[0]
-    slider_intervall.valmax = days_interval[1]-1
+    slider_intervall_start.valmin = days_interval[0]
+    slider_intervall_start.valmax = days_interval[1]-6
+    slider_intervall_slutt.valmin = days_interval[0]+6
+    slider_intervall_slutt.valmax = days_interval[1]
 
-def on_day_interval(kvartal):
+def update_range_relative():
+    slider_intervall_start.valmax = slider_intervall_slutt.val-6
+    slider_intervall_slutt.valmin = slider_intervall_start.val+6
+
+def on_day_interval(interval):
     global days_interval, marked_point
     axNok.cla()
     days_interval = (1,365)
-    if kvartal == 'Halvår':
+    if interval == 'År':
+        days_interval = (1,365)
+        slider_intervall_start.set_val(1)
+        slider_intervall_slutt.set_val(365)
+        update_range()
+    if interval == '1. Kvartal':
         days_interval = (1,90)
+        slider_intervall_start.set_val(1)
+        slider_intervall_slutt.set_val(90)
         update_range()
-    if kvartal == 'Kvartal':
+    if interval == '2. Kvartal':
         days_interval = (90, 180)
+        slider_intervall_start.set_val(90)
+        slider_intervall_slutt.set_val(180)
         update_range()
-    if kvartal == 'Måned':
+    if interval == '3. Kvartal':
         days_interval = (180,270)
+        slider_intervall_start.set_val(180)
+        slider_intervall_slutt.set_val(270)
         update_range()
-    if kvartal == 'Uke':
+    if interval == '4. Kvartal':
         days_interval = (270,365)
+        slider_intervall_start.set_val(270)
+        slider_intervall_slutt.set_val(365)
         update_range()
     marked_point = (0, 0)
     plot_graph()
@@ -78,7 +98,7 @@ def draw_circles_stations():
     circle = mpatches.Circle((637, 1120), 20, color='red')
     axBergen.add_patch(circle)
 
-
+"""
 def draw_label_and_ticks():
     num_labels = 12
     xlabels = ['J' ,'F' ,'M' ,'A' ,'M' ,'J', 'J', 'A', 'S', 'O', 'N', 'D']
@@ -97,6 +117,7 @@ def draw_label_and_ticks():
         xlabels = ['Okt', 'Nov', 'Des']
     axNok.set_xticks(xticks)
     axNok.set_xticklabels(xlabels)
+"""
 
 def plot_graph():
     axNok.cla()
@@ -137,7 +158,13 @@ def plot_graph():
     axNok.legend(lines, ["Nordnes", "Kronstad", NOXStreng1, NOXStreng2]) if l3 is None \
         else axNok.legend(lines, ["Nordnes", "Kronstad", "Markert plass", NOXStreng1, NOXStreng2])
     axNok.grid(linestyle='--')
+
+    """
     draw_label_and_ticks()
+    """
+
+    axNok.set_xticks(())
+    axNok.set_xticklabels(())
 
     #Plot Map of Bergen
     axBergen.axis('off')
@@ -150,38 +177,63 @@ def plot_graph():
 
 plot_graph()
 
-slider_intervall = Slider(ax = axTextBoxStart,
+slider_intervall_start = Slider(ax = axSliderStart,
                           valmin=days_interval[0],
-                          valmax=days_interval[1]-1,
-                          label = "Intervall",
+                          valmax=days_interval[1]-6,
+                          label = "Intervallstart",
                           valinit=1,
                           valfmt='%0.0f',
                           orientation="horizontal")
-labelStart = slider_intervall.ax.get_children()[4]
+labelStart = slider_intervall_start.ax.get_children()[4]
 labelStart.set_position((0.5, 0.7))
 labelStart.set_verticalalignment('top')
 labelStart.set_horizontalalignment('center')
 
-def update(val):
+slider_intervall_slutt = Slider(ax = axSliderSlutt,
+                          valmin=days_interval[0]+6,
+                          valmax=days_interval[1],
+                          label = "Intervallslutt",
+                          valinit=365,
+                          valfmt='%0.0f',
+                          orientation="horizontal")
+labelStart = slider_intervall_slutt.ax.get_children()[4]
+labelStart.set_position((0.5, 0.7))
+labelStart.set_verticalalignment('top')
+labelStart.set_horizontalalignment('center')
+
+def update_start(val):
     global days
     global days_interval
-    val = int(slider_intervall.val)
+    val = int(slider_intervall_start.val)
     days_interval = val, days_interval[1]
+    update_range_relative()
     fig.canvas.draw_idle()
     axNok.set_xlim(1, days)
     plot_graph()
     plt.draw()
 
-slider_intervall.on_changed(update)
+def update_slutt(val):
+    global days
+    global days_interval
+    val = int(slider_intervall_slutt.val)
+    days_interval = days_interval[0], val
+    update_range_relative()
+    fig.canvas.draw_idle()
+    axNok.set_xlim(1, days)
+    plot_graph()
+    plt.draw()
+
+slider_intervall_start.on_changed(update_start)
+slider_intervall_slutt.on_changed(update_slutt)
 
 # draw radiobutton interval
 listFonts = [12] * 5
 listColors = ['yellow'] * 5
 radio_button = RadioButtons(axInterval, ('År',
-                                          'Halvår',
-                                          'Kvartal',
-                                          'Måned',
-                                          'Uke'),
+                                          '1. Kvartal',
+                                          '2. Kvartal',
+                                          '3. Kvartal',
+                                          '4. Kvartal'),
                             label_props={'color': listColors, 'fontsize' : listFonts},
                             radio_props={'facecolor': listColors,  'edgecolor': listColors},
                             )
